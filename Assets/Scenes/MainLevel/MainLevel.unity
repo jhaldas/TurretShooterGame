@@ -357,7 +357,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 8.69e-42, w: 1.04e-43}
+  m_BoundingSphereOverride: {x: 1e-45, y: 2.4108332e+17, z: 1e-45, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -427,8 +427,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 35.7
+  far clip plane: 3000
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -769,9 +769,9 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: 0198d5e61a60b4f56bf23417631aae1d, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 500
-  m_DetailObjectDistance: 230
+  m_TreeCrossFadeLength: 150
+  m_TreeMaximumFullLODCount: 5000
+  m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
