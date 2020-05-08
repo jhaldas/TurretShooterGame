@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 7642544067785942103}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
+  turnSpeed: 10
+  fireRate: 1
   enemyTag: Enemy
   partToRotate: {fileID: 3239505501726639570}
-  turnSpeed: 10
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}

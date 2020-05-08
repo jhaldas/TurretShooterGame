@@ -24,11 +24,14 @@ public class Turret : MonoBehaviour
 
     public Transform firePoint;
 
+    //private Renderer renderer;
+
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        //renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -46,7 +49,7 @@ public class Turret : MonoBehaviour
         if (fireCountdown <= 0f)
         {
             Shoot();
-            fireCountdown = 1f/ fireRate;
+            fireCountdown = 1f / fireRate;
         }
 
         fireCountdown -= Time.deltaTime;
@@ -95,8 +98,5 @@ public class Turret : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-}
 
-internal class Quarternion
-{
 }
