@@ -20,11 +20,13 @@ public class Player : MonoBehaviour
 
     public GameObject moveTarget;
 
+    public Animator animator;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         mainCamera = Camera.main;
-
+        animator.SetInteger("Speed", 0);
     }
 
     // Update is called once per frame
