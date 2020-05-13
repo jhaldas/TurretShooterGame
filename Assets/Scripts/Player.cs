@@ -22,11 +22,16 @@ public class Player : MonoBehaviour
 
     public Animator animator;
 
+    private Vector3 curPos;
+    private Vector3 lastPos;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         mainCamera = Camera.main;
         animator.SetInteger("Speed", 0);
+
+        EnableMoveTarget();
     }
 
     // Update is called once per frame
@@ -45,6 +50,19 @@ public class Player : MonoBehaviour
             }
         }
         */
+
+        curPos = this.transform.position;
+
+        if (curPos == lastPos)
+        {
+            animator.SetBool("IsMoving", false);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", true);
+        }
+
+        lastPos = curPos;
     }
 
     public void MovePlayer(RaycastHit hit, int hasTarget)
@@ -53,12 +71,12 @@ public class Player : MonoBehaviour
 
         if (hasTarget == 0)
         {
-            moveTarget.GetComponentInChildren<Renderer>().enabled = true;
+            EnableMoveTarget();
             moveTarget.transform.position = hit.point;
         }
         else
         {
-            moveTarget.GetComponentInChildren<Renderer>().enabled = false;
+            DisableMoveTarget();
         }
     }
 
@@ -69,6 +87,16 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.blue; 
         Gizmos.DrawWireSphere(transform.position, interactRange);
 
+    }
+
+    void EnableMoveTarget()
+    {
+        moveTarget.GetComponentInChildren<Renderer>().enabled = true;
+    }
+
+    void DisableMoveTarget()
+    {
+        moveTarget.GetComponentInChildren<Renderer>().enabled = false;
     }
 
 

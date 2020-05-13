@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Transform target;
+    private GameObject target;
 
     public GameObject bloodSplat;
 
     public float speed = 20f;
 
-    public void Seek(Transform _target)
+    public float damage = 1f;
+
+    public void Seek(GameObject _target)
     {
         target = _target;
     }
@@ -24,12 +26,13 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
+            target.GetComponent<Enemy>().TakeDamage(damage);
             return;
         }
 

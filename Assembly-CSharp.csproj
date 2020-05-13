@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\LookAtTarget.cs" />
     <Compile Include="Assets\MouseManager.cs" />
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />

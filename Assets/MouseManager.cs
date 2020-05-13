@@ -28,6 +28,7 @@ public class MouseManager : MonoBehaviour
             if (Physics.Raycast(ray, out hitInfo))
             {
                 GameObject hitObject = hitInfo.transform.root.gameObject;
+
                 if (hitInfo.transform.gameObject.tag == "Building" || hitInfo.transform.gameObject.tag == "Enemy")
                 {
                     SelectObject(hitObject);
@@ -41,6 +42,8 @@ public class MouseManager : MonoBehaviour
             }
         }
     }
+
+
 
     void SelectObject(GameObject obj)
     {

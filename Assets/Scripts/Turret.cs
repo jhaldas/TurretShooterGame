@@ -6,7 +6,7 @@ public class Turret : MonoBehaviour
 {
 
     [Header("Attributes")]
-    private Transform target;
+    private GameObject target;
     public float range = 15f;
 
     public float turnSpeed = 2f;
@@ -39,7 +39,7 @@ public class Turret : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         lookRotation = Quaternion.LookRotation(dir, Vector3.up);
 
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
@@ -89,7 +89,7 @@ public class Turret : MonoBehaviour
 
         if (nearestEnemy != null && shortestDistance <= range)
         {
-            target = nearestEnemy.transform;
+            target = nearestEnemy;
         }
     }
 
