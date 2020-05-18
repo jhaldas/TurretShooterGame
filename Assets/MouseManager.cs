@@ -10,6 +10,8 @@ public class MouseManager : MonoBehaviour
 
     public SelectionIndicator objectTarget;
 
+    public Interactable focus;
+
     private void Start()
     {
         player = GameObject.FindObjectOfType<Player>();
@@ -62,4 +64,16 @@ public class MouseManager : MonoBehaviour
     {
         selectedObject = null;
     }
+
+    public void SetFocus(Interactable newFocus)
+    {
+        focus = newFocus;
+
+    }
+
+    public void removeFocus()
+    {
+        focus = null;
+    }
+
 }

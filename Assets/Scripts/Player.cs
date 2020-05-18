@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     private Vector3 curPos;
     private Vector3 lastPos;
 
+    public Interactable focus;
+    Transform target;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -79,6 +82,31 @@ public class Player : MonoBehaviour
             DisableMoveTarget();
         }
     }
+
+
+
+    public void SetFocus(Interactable newFocus)
+    {
+        focus = newFocus;
+
+    }
+
+    public void removeFocus()
+    {
+        focus = null;
+    }
+
+    public void FollowTarget(Interactable newTarget)
+    {
+         target = newTarget.transform;
+    }
+
+    public void StopFollowingTarget()
+    {
+        target = null;
+    }
+
+
 
     private void OnDrawGizmosSelected()
     {

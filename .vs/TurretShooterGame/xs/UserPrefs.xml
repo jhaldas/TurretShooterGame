@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{073A263E-C746-7A79-3A77-264CF7C1A140}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LookAtTarget.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
-      <File FileName="Assets/MouseManager.cs" Line="41" Column="18" />
+      <File FileName="Assets/MouseManager.cs" Line="35" Column="46" />
       <File FileName="Assets/Rotate.cs" Line="12" Column="36" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="18" Column="29" />
       <File FileName="Assets/Scripts/Player.cs" Line="35" Column="6" />
-      <File FileName="Assets/Bullet.cs" Line="37" Column="10" />
-      <File FileName="Assets/Scripts/Turret.cs" Line="42" Column="29" />
-      <File FileName="Assets/LookAtTarget.cs" Line="24" Column="6" />
+      <File FileName="Assets/LookAtTarget.cs" Line="21" Column="6" />
+      <File FileName="Assets/Interactable.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TurretShooterGame" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="LookAtTarget.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Player.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
