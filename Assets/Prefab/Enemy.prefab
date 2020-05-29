@@ -312,7 +312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2545061591409685176}
   - component: {fileID: 2545061591409685179}
-  - component: {fileID: 2545061591409685181}
   - component: {fileID: 2545061591409685177}
   - component: {fileID: 2545061591409685174}
   m_Layer: 0
@@ -346,20 +345,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2545061591409685183}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &2545061591409685181
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2545061591409685183}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 4.2461886
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.031121, z: 0}
 --- !u!195 &2545061591409685177
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -394,9 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f905a63022d84d709597286f462fa9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  myStats: {fileID: 0}
   maxHP: 10
-  healthbar: {fileID: 2545061589990804280}
+  target: {fileID: 0}
 --- !u!1 &3749561735238628305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,11 +1049,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2545061591409685176}
     m_Modifications:
-    - target: {fileID: 3199740923922449055, guid: 6dd2c75195ae84ae5bffb2bf5704c254,
-        type: 3}
-      propertyPath: m_Name
-      value: HeathBar
-      objectReference: {fileID: 0}
     - target: {fileID: 3199740923922449051, guid: 6dd2c75195ae84ae5bffb2bf5704c254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1174,6 +1154,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3199740923922449055, guid: 6dd2c75195ae84ae5bffb2bf5704c254,
+        type: 3}
+      propertyPath: m_Name
+      value: HeathBar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dd2c75195ae84ae5bffb2bf5704c254, type: 3}
 --- !u!224 &2545061589515296042 stripped
@@ -1182,15 +1167,3 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1096102466633686961}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2545061589990804280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3199740924393804937, guid: 6dd2c75195ae84ae5bffb2bf5704c254,
-    type: 3}
-  m_PrefabInstance: {fileID: 1096102466633686961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
