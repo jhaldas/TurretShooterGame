@@ -14,9 +14,12 @@ Player
 
 Movement
  - Player movement is similar to League of Legends.  To move, just click the destination and the player will autopath there.  
+ 
 Enemies
  - A prefab of an enemy created in Blender and animated on Mixamo.  Placed enemies will target the player until killed.  The player can click on enemies to target them, however attacking has not been implemented yet for either the player or enemy.  Enemies also have health bars that will deplete and disappear when at 0 health.
+ 
 Turrets
  - The player can also interact with the turret, however turrets' "upgrade" option is not programmed yet.  Turrets will automatically lock onto the closest enemy and shoot until the enemy is dead or out of range.  
+ 
 Map
  - The map is simply a flat plane with trees made in Blender boardering the edge.
